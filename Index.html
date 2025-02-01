@@ -1751,6 +1751,77 @@
             background: url('separator-1.png') repeat-x;
             border: none;
         }
+
+
+        /* Section 143: Responsive Styling */
+#section143 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 900px; /* Ensures content does not stretch too wide */
+    margin: 0 auto; /* Centers the section */
+    padding: 50px 5%; /* Keeps left & right padding fixed at 5% */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Heading Styling */
+#section143 h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #373f27;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+
+/* Paragraph Styling */
+#section143 p {
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+    color: #373f27;
+    font-family: "Open Sans", sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    #section143 {
+        padding: 40px 5%;
+    }
+    #section143 h2 {
+        font-size: 1.8rem;
+    }
+    #section143 p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #section143 {
+        padding: 40px 5%;
+    }
+    #section143 h2 {
+        font-size: 1.6rem;
+    }
+    #section143 p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #section143 {
+        padding: 30px 5%;
+    }
+    #section143 h2 {
+        font-size: 1.4rem;
+    }
+    #section143 p {
+        font-size: 0.95rem;
+    }
+}
+
     </style>
 </head>
 
@@ -1869,7 +1940,7 @@
             </div>
         </div>
     </section>
-    <section id="section2">
+    <!-- <section id="section2">
         <h2>Why Gokarna:</h2><br>
 
         <p>
@@ -1882,7 +1953,15 @@
             blessings for peace, prosperity, and harmony in their lives, making Gokarna a uniquely blessed destination
             for ancestral worship.
         </p>
+    </section> -->
+    <section id="section143">
+        <h2>Why Gokarna?</h2>
+        <p>
+            Gokarna, often referred to as the 'Kashi of the South,' holds immense spiritual significance for ancestral rituals 
+            such as Narayanbali, Nagabali, and PitruDosha Nivarana.
+        </p>
     </section>
+    
     <hr class="custom-hr">
 
     <!-- Wrapping everything in the testimonial-section -->
