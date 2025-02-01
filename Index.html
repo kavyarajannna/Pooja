@@ -1227,59 +1227,186 @@
         }
 
 
-        /* Section 2: Scroll Animation and Styling */
-        #section2 {
-            text-align: center;
-            /* background-image: url(/SL-040522-49460-117.jpg); */
-            background-size: cover;
-            /* Ensures the image covers the section without distortion */
-            background-position: center;
-            /* Centers the image within the section */
-            background-repeat: no-repeat;
-            /* Prevents the image from repeating */
-            padding: 40px 10%;
-        }
+       /* Contact Section */
+.contact-section {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.856), rgba(255, 255, 255, 0.5)), url(/Screenshot\ 2025-01-30\ 233743.png);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px 20px;
+    padding: 8%;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
-        #section2 p {
-            text-align: justify;
-            font-size: 1.2857142857rem;
-            line-height: 1.875rem;
-            font-weight: 400;
-            color: #373f27;
-            font-family: Open Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
+.contact-section .contact-column {
+    padding: 20px;
+}
 
-        #section2 h2 {
-            text-align: center;
-            font-size: 2.2857142858rem;
-            font-weight: 600;
-            line-height: 1.2;
-            margin-bottom: .5rem;
-            color: #373f27;
-            font-family: Open Sans, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
-            opacity: 0;
-            transform: translateY(30px);
-            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-        }
+.contact-section .contact-column h4 {
+    color: #373f27;
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    font-family: Open Sans, sans-serif;
+}
 
-        #section2 h2.scroll-animate,
-        #section2 p.scroll-animate {
-            opacity: 1;
-            transform: translateY(0);
-        }
+.contact-section .contact-column p {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    line-height: 1.75rem;
+    color: #1d2833;
+    font-family: Open Sans, sans-serif;
+}
 
-        @media (max-width: 768px) {
-            #section1 {
-                grid-template-columns: 1fr 1fr;
-            }
+/* Icons with Shimmer Effect */
+.contact-section .icon {
+    font-size: 55px;
+    margin-bottom: 20px;
+    color: transparent;
+    background: linear-gradient(90deg, #F3C623, #EB8317, #F4F6FF);
+    background-size: 200% 100%;
+    -webkit-background-clip: text;
+    animation: shimmer 5s linear infinite;
+}
 
-            #section2 {
-                padding: 40px 5%;
-            }
-        }
+/* Shimmer Animation */
+@keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+}
+
+/* Links */
+.contact-section a {
+    text-decoration: none;
+    color: #555;
+}
+
+.contact-section a:hover {
+    color: #000;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+    .contact-section {
+        padding: 6%;
+    }
+    .contact-section .contact-column h4 {
+        font-size: 1.8rem;
+    }
+    .contact-section .contact-column p {
+        font-size: 1.1rem;
+    }
+    .contact-section .icon {
+        font-size: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 5%;
+    }
+    .contact-section .contact-column h4 {
+        font-size: 1.5rem;
+    }
+    .contact-section .contact-column p {
+        font-size: 1rem;
+    }
+    .contact-section .icon {
+        font-size: 45px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section {
+        padding: 4%;
+    }
+    .contact-section .contact-column h4 {
+        font-size: 1.3rem;
+    }
+    .contact-section .contact-column p {
+        font-size: 0.95rem;
+    }
+    .contact-section .icon {
+        font-size: 40px;
+    }
+}
+
+/* Section 2: Scroll Animation and Styling */
+#section2 {
+    text-align: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px 10%;
+}
+
+#section2 p {
+    text-align: justify;
+    font-size: 1.2rem;
+    line-height: 1.75rem;
+    color: #373f27;
+    font-family: Open Sans, sans-serif;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+#section2 h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #373f27;
+    font-family: Open Sans, sans-serif;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Scroll Animation */
+#section2 h2.scroll-animate, 
+#section2 p.scroll-animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    #section2 {
+        padding: 40px 8%;
+    }
+    #section2 h2 {
+        font-size: 1.8rem;
+    }
+    #section2 p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    #section2 {
+        padding: 40px 5%;
+    }
+    #section2 h2 {
+        font-size: 1.6rem;
+    }
+    #section2 p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    #section2 {
+        padding: 30px 4%;
+    }
+    #section2 h2 {
+        font-size: 1.4rem;
+    }
+    #section2 p {
+        font-size: 0.95rem;
+    }
+}
+
 
 
         /* Hero Section Styles */
