@@ -1334,30 +1334,38 @@
 
 /* Section 2: Scroll Animation and Styling */
 #section2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers content */
+    justify-content: center;
+    max-width: 900px; /* Slightly wider for better spacing */
+    margin: 0 auto; /* Reduced margin */
     text-align: center;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 50px 10%; /* Reduced padding for desktop */
+    padding: 50px 5%; /* Adjusted left & right padding */
 }
 
-#section2 p {
-    text-align: justify;
-    font-size: 1.2rem;
-    line-height: 1.75rem;
+/* Heading Styling */
+#section2 h2 {
+    font-size: 2rem;
+    font-weight: 600;
     color: #373f27;
-    font-family: Open Sans, sans-serif;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
 }
 
-#section2 h2 {
-    text-align: center;
-    font-size: 2rem;
-    font-weight: 600;
+/* Paragraph Styling */
+#section2 p {
+    text-align: left; /* Ensures text is left-aligned */
+    font-size: 1.2rem;
+    line-height: 1.75rem;
     color: #373f27;
-    font-family: Open Sans, sans-serif;
+    font-family: "Open Sans", sans-serif;
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.8s ease-out, transform 0.8s ease-out;
@@ -1373,7 +1381,7 @@
 /* Responsive Design */
 @media (max-width: 1024px) {
     #section2 {
-        padding: 40px 8%; /* Adjust padding for medium screens */
+        padding: 40px 5%;
     }
     #section2 h2 {
         font-size: 1.8rem;
@@ -1385,7 +1393,7 @@
 
 @media (max-width: 768px) {
     #section2 {
-        padding: 40px 5%; /* Keep padding smaller for mobile */
+        padding: 40px 5%;
     }
     #section2 h2 {
         font-size: 1.6rem;
@@ -1397,7 +1405,7 @@
 
 @media (max-width: 480px) {
     #section2 {
-        padding: 30px 4%; /* Smaller padding for very small screens */
+        padding: 30px 5%;
     }
     #section2 h2 {
         font-size: 1.4rem;
@@ -1996,9 +2004,9 @@
                 <div class="line"></div> <!-- Horizontal line -->
                 <ul>
                     <li><a href="Home.html">Home</a></li>
-                  
+                    <li><a href="AboutUs.html">About Us</a></li>
                     <li><a href="Pooja.html">Poojas</a></li>
-                 
+                    <li><a href="Blogs.html">Blogs</a></li>
                     <li><a href="ContactUs.html">Contact</a></li>
                 </ul>
                 <!-- <div class="line"></div> Horizontal line below the links -->
